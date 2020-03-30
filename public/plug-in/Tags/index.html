@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/tag.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/tag.css" />
+	</head>
+	<body>
+		<input type="text" id="tagValue1"> 
+
+	</body>
+</html>
+<script type="text/javascript">
+	//添加标签
+	var tag = new Tag("tagValue");
+	tag.initView();
+	
+	//初始化已有标签
+	var tag1 = new Tag("tagValue1");
+	tag1.tagValue = "浙江,绍兴,上海,山东,北京,四川";
+	tag1.initView();
+	
+	//禁用标签操作
+	var tag2 = new Tag("tagValue2");
+	tag2.tagValue = "浙江,绍兴,上海,山东,北京,四川";
+	tag2.isDisable=true;
+	tag2.initView();
+	
+	//禁用标签操作
+	var tag3 = new Tag("tagValue3");
+	tag3.tagValue = "浙江,绍兴,上海,山东,北京,四川";
+	tag3.initView();
+	
+	function openUpdate(){
+		tag3.unDisableFun();
+	}
+	function closeUpdate(){
+		tag3.disableFun();
+	}
+	
+</script>
